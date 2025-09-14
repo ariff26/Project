@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    footer{
+        width: 100%;
+        height: 30px;
+        background-color: blue;
+        color: white;
+        font-weight: 600;
+        position: relative;
+        top: 45px;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course Enrollment Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <img src="./images/Zenjade-Automation-logo-PNG-01-1-scaled-1536x411.png" width="200" alt="">
+
+<div class="container mt-5">
+  <div class="card shadow p-4">
+    <h2 class="text-center mb-4">Course Enrollment Form</h2>
+    <form action="http://localhost:8080/enroll" method="POST">
+      
+      <!-- Student Name -->
+      <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input type="text" name="name" class="form-control" required>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label">Email Address</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+
+      <!-- Phone -->
+      <div class="mb-3">
+        <label class="form-label">Phone Number</label>
+        <input type="text" name="phone" class="form-control" required>
+      </div>
+
+      <!-- Course -->
+      <div class="mb-3">
+        <label class="form-label">Select Course</label>
+        <select name="course" class="form-select" required>
+          <option value="">-- Choose a Course --</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Data Science">Data Science</option>
+          <option value="AI & Machine Learning">AI & Machine Learning</option>
+          <option value="Cloud Computing">Cloud Computing</option>
+        </select>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary w-50" onclick="enroll()">Enroll Now</button>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="./my.js"></script>
+<footer><center> © 2025 Zenjade Automation Technology Private Limited. All Rights Reserved by ZATPL.</center></footer>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenjade Automation Technology Private Limited</title>
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap" rel="stylesheet">
+  <!-- JS for Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 800;
+      background: #fff;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .logo {
+      float: left;
+      padding: 10px 0;
+    }
+    nav {
+      float: right;
+      padding-top: 20px;
+      position: relative;
+    }
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    nav li {
+      display: inline-block;
+      margin-left: 70px;
+      padding-top: 23px;
+      position: relative;
+    }
+    nav a {
+      color: #444;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s;
+      position: relative;
+      z-index:1;
+    }
+    nav a:hover {
+      color: #000;
+    }
+    nav a::before {
+      content: '';
+      display: block;
+      height: 5px;
+      background-color: blue;
+      position: absolute;
+      top: 10;
+      left: 0;
+      width: 0%;
+      transition: width 250ms ease-in-out;
+      z-index:0;
+    }
+    nav a:hover::before {
+      width: 100%;
+    }
+    .fa-bars {
+      display: none;
+    }
+    .hero {
+      width: 99%;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: -10px;
+    }
+    .txt, .caurosel {
+      width: 50%;
+      height: 100%;
+    }
+    .maintxt {
+      font-weight: 600;
+      padding-left: 50px;
+      font-size: 45px;
+      margin: 10px 10px;
+      color: #222;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 45px;
+      margin: 10px 10px 0 10px;
+      color: blue;
+      position: relative;
+      left: 0;
+      top: 0;
+      padding-left: 50px;
+      border: none;
+    }
+    .sectxt {
+      font-weight: 700;
+      font-size: 25px;
+      margin: 10px 10px;
+      color: #333;
+      padding-left: 50px;
+    }
+    button {
+      border: none;
+      position: relative;
+      left: 50px;
+      /* padding-left: 50px; */
+      cursor: pointer;
+      width: 120px;
+      height: 45px;
+      border-radius: 7px;
+      font-weight: 800;
+      background-color: blue;
+      color: azure;
+      margin: 25px 10px 0 10px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: #003399;
+    }
+    footer {
+      background-color: blue;
+      color: white;
+      font-weight: 800;
+      font-size: 16px;
+      text-align: center;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      width: 100%;
+    }
+    /* RESPONSIVE TABLET & MOBILE */
+    @media only screen and (max-width: 991px) {
+      .container {
+        width: 97%;
+        padding: 0 1vw;
+      }
+      nav li {
+        margin-left: 35px;
+      }
+      .hero {
+        flex-direction: column;
+        min-height: unset;
+      }
+      .txt, .caurosel {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .logo {
+        float: left;
+        text-align: center;
+        display: block;
+      }
+      nav {
+        float: none;
+        text-align: right;
+        padding-top: 10px;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 55px;
+        right: 15px;
+        padding: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        min-width: 120px;
+        z-index:99;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      nav li {
+        display: block;
+        margin: 0 0 15px 0;
+        padding: 0 20px;
+      }
+      .fa-bars {
+        display: block;
+        font-size: 22px;
+        cursor: pointer;
+        margin-right: 30px;
+        margin-top: 10px;
+        position: relative;
+        /* top: -70px; */
+      }
+      .hero {
+        flex-direction: column;
+        height: auto;
+        min-height: unset;
+        top: 0;
+      }
+      .txt, .caurosel {
+        width: 100%;
+        height: 100px;
+      }
+      .maintxt {
+        font-size: 35px;
+        margin: 10px 10px 0 10px;
+      }
+      h3 {
+        font-size: 22px;
+        margin: 10px 10px 0 10px;
+        left: 0;
+        top: 0;
+        text-align: left;
+        border: none;
+      }
+      .sectxt {
+        font-size: 18px;
+        margin: 10px 10px;
+      }
+      button {
+        font-size: 16px;
+        width: 110px;
+        height: 40px;
+        margin: 15px 10px 0 10px;
+      }
+      footer {
+        font-size: 12px;
+        height: auto;
+        padding: 10px 0;
+        position: relative;
+        top: 350px;
+      }
+      .caurosel {
+        margin-top: 25px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .maintxt {
+        font-size: 25px;
+        margin: 10px;
+      }
+      h3 {
+        font-size: 22px;
+        margin: 10px;
+      }
+      .sectxt {
+        font-size: 17px;
+        margin: 10px;
+      }
+      .logo img {
+        width: 140px;
+      }
+      button {
+        font-size: 14px;
+        width: 100px;
+        height: 36px;
+      }
+      .caurosel {
+        position: relative;
+        top: 55px;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container clearfix" style="overflow: visible;">
+    <h1 class="logo">
+      <img src="./images/Zenjade-Automation-logo-PNG-01-1-scaled-1536x411.png" alt="Zenjade Automation Logo" width="200">
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="./dashboard.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <i class="fa-solid fa-bars" id="menu-toggle"></i>
+    </nav>
+    <div style="clear:both"></div>
+  </div>
+  <br>
+  <div class="hero">
+    <div class="txt">
+      <h2 class="maintxt">Unlock your Skills and potential with</h2>
+      <h3>Zenjade Automation Technology Private Limited</h3>
+      <h4 class="sectxt">Access a wide range of courses designed to boost your knowledge and career</h4>
+      <button>Book a call</button>
+    </div>
+    <div class="caurosel">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-80" src="./images/bg1.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-80" src="./images/bg2.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-80" src="./images/bg3.png" alt="Third slide">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    © 2025 Zenjade Automation Technology Private Limited. All Rights Reserved by ZATPL.
+  </footer>
+  <!-- Responsive Navigation JS -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+    document.addEventListener('click', function(e){
+      // Hide menu on outside click for better UX on mobile
+      if(!toggleBtn.contains(e.target) && !navMenu.contains(e.target)){
+        navMenu.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>

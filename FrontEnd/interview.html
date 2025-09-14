@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Questions Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .roles {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+      position: relative;
+      top: 30px;
+    }
+    .role-section {
+      display: none;
+      margin-top: 20px;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+     input[type="submit"] {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background: #0056b3;
+    } 
+    .logbtn{
+      float: right;
+      position: relative;
+      /* top: -125px; */
+      right: 55px;
+      width: 80px;
+      height: 35px;
+      border-radius: 8px;
+      font-weight: 500;
+      border: none;
+      box-shadow: 5px 5px 5px grey;
+
+      color: white;
+    }
+    .logbtn:hover{
+     transform: translate(5px);
+    }
+  </style>
+</head>
+<body>
+  <img src="./images/Zenjade-Automation-logo-PNG-01-1-scaled-1536x411.png" alt="" class="logo" width="200">
+ <button class="logbtn"><a href="./index.html" style="text-decoration: none;">Home</a></button>
+ <h1 class="candidate"></h1>
+  <!-- Role Selection -->
+  <div class="roles">
+    <p><b>Select up to 5 Roles:</b></p>
+    <label><input type="checkbox" name="role" value="tester" onchange="handleRoleSelection(this)"> Tester</label><br>
+    <label><input type="checkbox" name="role" value="developer" onchange="handleRoleSelection(this)"> Developer</label><br>
+    <label><input type="checkbox" name="role" value="uiux" onchange="handleRoleSelection(this)"> UI/UX Designer</label><br>
+    <label><input type="checkbox" name="role" value="pm" onchange="handleRoleSelection(this)"> Project Manager</label><br>
+    <label><input type="checkbox" name="role" value="ba" onchange="handleRoleSelection(this)"> Business Analyst</label><br>
+    <label><input type="checkbox" name="role" value="dba" onchange="handleRoleSelection(this)"> Database Administrator</label><br>
+    <label><input type="checkbox" name="role" value="devops" onchange="handleRoleSelection(this)"> DevOps Engineer</label><br>
+    <label><input type="checkbox" name="role" value="sysadmin" onchange="handleRoleSelection(this)"> System Administrator</label><br>
+    <label><input type="checkbox" name="role" value="cloud" onchange="handleRoleSelection(this)"> Cloud Engineer</label><br>
+    <label><input type="checkbox" name="role" value="data" onchange="handleRoleSelection(this)"> Data Analyst</label>
+  </div>
+
+ 
+    <!-- Tester Section -->
+      <h2>Interview Questions</h2>
+      
+    <div id="tester" class="role-section">
+      <form action="http://localhost:8080/interview/testing" method="post" id="interviewForm">
+      <h3>Tester Role - 15 Questions</h3>
+      <div class="question">
+        <p>1. What is the main purpose of Software Testing?</p>
+        <label><input type="radio" name="tq1"> Ensure quality of software</label><br>
+        <label><input type="radio" name="tq1"> Add more features</label><br>
+        <label><input type="radio" name="tq1"> Reduce development time</label>
+      </div>
+      
+    <div class="question">
+      <p>2. Which of these is a type of testing?</p>
+      <label><input type="radio" name="q2"> Unit Testing</label><br>
+      <label><input type="radio" name="q2"> Debugging</label><br>
+      <label><input type="radio" name="q2"> Coding</label>
+    </div>
+
+    <div class="question">
+      <p>3. What does Black Box Testing focus on?</p>
+      <label><input type="radio" name="q3"> Internal code</label><br>
+      <label><input type="radio" name="q3"> Functional behavior</label><br>
+      <label><input type="radio" name="q3"> Performance only</label>
+    </div>
+
+    <div class="question">
+      <p>4. Which of these is a non-functional testing type?</p>
+      <label><input type="radio" name="q4"> Regression Testing</label><br>
+      <label><input type="radio" name="q4"> Performance Testing</label><br>
+      <label><input type="radio" name="q4"> Unit Testing</label>
+    </div>
+
+    <div class="question">
+      <p>5. What is Regression Testing?</p>
+      <label><input type="radio" name="q5"> Testing new modules only</label><br>
+      <label><input type="radio" name="q5"> Testing after code changes</label><br>
+      <label><input type="radio" name="q5"> Testing user requirements</label>
+    </div>
+
+    <div class="question">
+      <p>6. Which is NOT part of SDLC?</p>
+      <label><input type="radio" name="q6"> Requirement Gathering</label><br>
+      <label><input type="radio" name="q6"> Testing</label><br>
+      <label><input type="radio" name="q6"> Playing games</label>
+    </div>
+
+    <div class="question">
+      <p>7. What is the role of a Test Case?</p>
+      <label><input type="radio" name="q7"> To guide developers</label><br>
+      <label><input type="radio" name="q7"> To verify expected behavior</label><br>
+      <label><input type="radio" name="q7"> To write project code</label>
+    </div>
+
+    <div class="question">
+      <p>8. Which tool is used for bug tracking?</p>
+      <label><input type="radio" name="q8"> JIRA</label><br>
+      <label><input type="radio" name="q8"> Eclipse</label><br>
+      <label><input type="radio" name="q8"> Visual Studio</label>
+    </div>
+
+    <div class="question">
+      <p>9. Smoke Testing is also called?</p>
+      <label><input type="radio" name="q9"> Sanity Testing</label><br>
+      <label><input type="radio" name="q9"> Build Verification Testing</label><br>
+      <label><input type="radio" name="q9"> Unit Testing</label>
+    </div>
+
+    <div class="question">
+      <p>10. Which testing ensures system works under load?</p>
+      <label><input type="radio" name="q10"> Functional Testing</label><br>
+      <label><input type="radio" name="q10"> Load Testing</label><br>
+      <label><input type="radio" name="q10"> Unit Testing</label>
+    </div>
+
+    <div class="question">
+      <p>11. What is the purpose of a Bug Report?</p>
+      <label><input type="radio" name="q11"> To hide issues</label><br>
+      <label><input type="radio" name="q11"> To document and report issues</label><br>
+      <label><input type="radio" name="q11"> To write test cases</label>
+    </div>
+
+    <div class="question">
+      <p>12. Which testing is done without planning or documentation?</p>
+      <label><input type="radio" name="q12"> Exploratory Testing</label><br>
+      <label><input type="radio" name="q12"> Unit Testing</label><br>
+      <label><input type="radio" name="q12"> Regression Testing</label>
+    </div>
+
+    <div class="question">
+      <p>13. Alpha Testing is performed by?</p>
+      <label><input type="radio" name="q13"> End Users</label><br>
+      <label><input type="radio" name="q13"> Developers/Testers</label><br>
+      <label><input type="radio" name="q13"> Customers only</label>
+    </div>
+
+    <div class="question">
+      <p>14. Which comes first?</p>
+      <label><input type="radio" name="q14"> System Testing</label><br>
+      <label><input type="radio" name="q14"> Integration Testing</label><br>
+      <label><input type="radio" name="q14"> Acceptance Testing</label>
+    </div>
+
+    <div class="question">
+      <p>15. What is Selenium mainly used for?</p>
+      <label><input type="radio" name="q15"> Automation Testing</label><br>
+      <label><input type="radio" name="q15"> Manual Testing</label><br>
+      <label><input type="radio" name="q15"> Writing code only</label>
+    </div>
+    <button type="submit" onclick="testing()">Submit</button>
+    </form>
+    </div>
+    
+    
+     
+
+    <!-- Developer Section -->
+    <div id="developer" class="role-section">
+          <form action="http://localhost:8080/developer" method="post">
+      <h3>Developer Role - 15 Questions</h3>
+      <div class="question">
+        <p>1. Which language is commonly used for backend development?</p>
+        <label><input type="radio" name="dq1"> Java</label><br>
+        <label><input type="radio" name="dq1"> HTML</label><br>
+        <label><input type="radio" name="dq1"> CSS</label>
+      </div>
+  <div class="question">
+    <p>2. What does OOP stand for?</p>
+    <label><input type="radio" name="dq2"> Object Oriented Programming</label><br>
+    <label><input type="radio" name="dq2"> Online Operating Process</label><br>
+    <label><input type="radio" name="dq2"> Open Office Program</label>
+  </div>
+
+  <div class="question">
+    <p>3. Which of the following is a Java framework?</p>
+    <label><input type="radio" name="dq3"> Spring Boot</label><br>
+    <label><input type="radio" name="dq3"> Photoshop</label><br>
+    <label><input type="radio" name="dq3"> Excel</label>
+  </div>
+
+  <div class="question">
+    <p>4. Which SQL command is used to retrieve data?</p>
+    <label><input type="radio" name="dq4"> SELECT</label><br>
+    <label><input type="radio" name="dq4"> UPDATE</label><br>
+    <label><input type="radio" name="dq4"> DELETE</label>
+  </div>
+
+  <div class="question">
+    <p>5. What is the purpose of Git?</p>
+    <label><input type="radio" name="dq5"> Version Control</label><br>
+    <label><input type="radio" name="dq5"> Debugging</label><br>
+    <label><input type="radio" name="dq5"> Deployment</label>
+  </div>
+
+  <div class="question">
+    <p>6. Which keyword is used to inherit a class in Java?</p>
+    <label><input type="radio" name="dq6"> extends</label><br>
+    <label><input type="radio" name="dq6"> implements</label><br>
+    <label><input type="radio" name="dq6"> inherit</label>
+  </div>
+
+  <div class="question">
+    <p>7. Which of these is a NoSQL database?</p>
+    <label><input type="radio" name="dq7"> MongoDB</label><br>
+    <label><input type="radio" name="dq7"> MySQL</label><br>
+    <label><input type="radio" name="dq7"> PostgreSQL</label>
+  </div>
+
+  <div class="question">
+    <p>8. Which HTTP method is used to create a new resource?</p>
+    <label><input type="radio" name="dq8"> POST</label><br>
+    <label><input type="radio" name="dq8"> GET</label><br>
+    <label><input type="radio" name="dq8"> DELETE</label>
+  </div>
+
+  <div class="question">
+    <p>9. Which of the following is NOT a programming paradigm?</p>
+    <label><input type="radio" name="dq9"> Procedural</label><br>
+    <label><input type="radio" name="dq9"> Functional</label><br>
+    <label><input type="radio" name="dq9"> Typographical</label>
+  </div>
+
+  <div class="question">
+    <p>10. In Java, which keyword is used to define a constant?</p>
+    <label><input type="radio" name="dq10"> final</label><br>
+    <label><input type="radio" name="dq10"> static</label><br>
+    <label><input type="radio" name="dq10"> const</label>
+  </div>
+
+  <div class="question">
+    <p>11. Which of these is a front-end framework?</p>
+    <label><input type="radio" name="dq11"> React</label><br>
+    <label><input type="radio" name="dq11"> Spring Boot</label><br>
+    <label><input type="radio" name="dq11"> Django</label>
+  </div>
+
+  <div class="question">
+    <p>12. Which keyword is used in JavaScript to declare a variable?</p>
+    <label><input type="radio" name="dq12"> var</label><br>
+    <label><input type="radio" name="dq12"> let</label><br>
+    <label><input type="radio" name="dq12"> Both</label>
+  </div>
+
+  <div class="question">
+    <p>13. Which design pattern ensures a class has only one instance?</p>
+    <label><input type="radio" name="dq13"> Singleton</label><br>
+    <label><input type="radio" name="dq13"> Observer</label><br>
+    <label><input type="radio" name="dq13"> Factory</label>
+  </div>
+
+  <div class="question">
+    <p>14. Which principle is part of SOLID design?</p>
+    <label><input type="radio" name="dq14"> Open/Closed Principle</label><br>
+    <label><input type="radio" name="dq14"> Constant Variable Principle</label><br>
+    <label><input type="radio" name="dq14"> Parallel Principle</label>
+  </div>
+
+  <div class="question">
+    <p>15. What is Continuous Integration (CI)?</p>
+    <label><input type="radio" name="dq15"> Frequently merging code changes</label><br>
+    <label><input type="radio" name="dq15"> Manual testing only</label><br>
+    <label><input type="radio" name="dq15"> Database optimization</label>
+  </div>
+       <button type="submit" onclick="developer()">Submit</button>
+    </form>
+    </div>
+   
+
+    <!-- UI/UX Section -->
+    <div id="uiux" class="role-section">
+      <form action="http://localhost:8080/uiux" method="post">
+      <h3>UI/UX Designer Role - 15 Questions</h3>
+      <div class="question">
+    <p>1. What does UI stand for?</p>
+    <label><input type="radio" name="uxq1"> User Interface</label><br>
+    <label><input type="radio" name="uxq1"> Unified Integration</label><br>
+    <label><input type="radio" name="uxq1"> Unique Interaction</label>
+  </div>
+
+  <div class="question">
+    <p>2. What does UX stand for?</p>
+    <label><input type="radio" name="uxq2"> User Experience</label><br>
+    <label><input type="radio" name="uxq2"> User Exchange</label><br>
+    <label><input type="radio" name="uxq2"> Unique Execution</label>
+  </div>
+
+  <div class="question">
+    <p>3. Which tool is commonly used for UI design?</p>
+    <label><input type="radio" name="uxq3"> Figma</label><br>
+    <label><input type="radio" name="uxq3"> Eclipse</label><br>
+    <label><input type="radio" name="uxq3"> Jenkins</label>
+  </div>
+
+  <div class="question">
+    <p>4. Which of these is a principle of good UI design?</p>
+    <label><input type="radio" name="uxq4"> Consistency</label><br>
+    <label><input type="radio" name="uxq4"> Complexity</label><br>
+    <label><input type="radio" name="uxq4"> Randomness</label>
+  </div>
+
+  <div class="question">
+    <p>5. Wireframes are mainly used for?</p>
+    <label><input type="radio" name="uxq5"> Structure and layout planning</label><br>
+    <label><input type="radio" name="uxq5"> Database modeling</label><br>
+    <label><input type="radio" name="uxq5"> Coding</label>
+  </div>
+
+  <div class="question">
+    <p>6. What is a user persona?</p>
+    <label><input type="radio" name="uxq6"> Fictional character representing target users</label><br>
+    <label><input type="radio" name="uxq6"> A type of UI button</label><br>
+    <label><input type="radio" name="uxq6"> Coding framework</label>
+  </div>
+
+  <div class="question">
+    <p>7. Which color scheme is easiest for readability?</p>
+    <label><input type="radio" name="uxq7"> Dark text on light background</label><br>
+    <label><input type="radio" name="uxq7"> Light text on white background</label><br>
+    <label><input type="radio" name="uxq7"> Neon colors</label>
+  </div>
+
+  <div class="question">
+    <p>8. Which is an example of a usability test?</p>
+    <label><input type="radio" name="uxq8"> Asking users to complete tasks</label><br>
+    <label><input type="radio" name="uxq8"> Debugging backend code</label><br>
+    <label><input type="radio" name="uxq8"> Writing SQL queries</label>
+  </div>
+
+  <div class="question">
+    <p>9. What is the purpose of a prototype?</p>
+    <label><input type="radio" name="uxq9"> To test design concepts</label><br>
+    <label><input type="radio" name="uxq9"> To replace final product</label><br>
+    <label><input type="radio" name="uxq9"> To design databases</label>
+  </div>
+
+  <div class="question">
+    <p>10. What is responsive design?</p>
+    <label><input type="radio" name="uxq10"> Design that adapts to different devices</label><br>
+    <label><input type="radio" name="uxq10"> Design that ignores mobile users</label><br>
+    <label><input type="radio" name="uxq10"> Only desktop-friendly design</label>
+  </div>
+
+  <div class="question">
+    <p>11. Which file format is commonly used for vector graphics?</p>
+    <label><input type="radio" name="uxq11"> SVG</label><br>
+    <label><input type="radio" name="uxq11"> PNG</label><br>
+    <label><input type="radio" name="uxq11"> JPG</label>
+  </div>
+
+  <div class="question">
+    <p>12. What is information architecture in UX?</p>
+    <label><input type="radio" name="uxq12"> Organizing content for usability</label><br>
+    <label><input type="radio" name="uxq12"> Writing backend APIs</label><br>
+    <label><input type="radio" name="uxq12"> Database indexing</label>
+  </div>
+
+  <div class="question">
+    <p>13. Which design approach focuses on mobile devices first?</p>
+    <label><input type="radio" name="uxq13"> Mobile-first design</label><br>
+    <label><input type="radio" name="uxq13"> Desktop-first design</label><br>
+    <label><input type="radio" name="uxq13"> Server-side design</label>
+  </div>
+
+  <div class="question">
+    <p>14. What is the main goal of accessibility in design?</p>
+    <label><input type="radio" name="uxq14"> Ensure usability for people with disabilities</label><br>
+    <label><input type="radio" name="uxq14"> Add fancy animations</label><br>
+    <label><input type="radio" name="uxq14"> Reduce testing time</label>
+  </div>
+
+  <div class="question">
+    <p>15. Which principle focuses on reducing user effort?</p>
+    <label><input type="radio" name="uxq15"> Usability and simplicity</label><br>
+    <label><input type="radio" name="uxq15"> Complexity and confusion</label><br>
+    <label><input type="radio" name="uxq15"> Randomness</label>
+  </div>
+    <button type="submit" onclick="uiux()">Submit</button>
+    </form>
+    </div>
+    <div id="pm" class="role-section">
+      <form action="">
+      <h3>Project Manager Role - 15 Questions</h3>
+    <div class="question">
+    <p>1. What is the primary responsibility of a Project Manager?</p>
+    <label><input type="radio" name="pmq1"> Planning, executing, and closing projects</label><br>
+    <label><input type="radio" name="pmq1"> Writing code</label><br>
+    <label><input type="radio" name="pmq1"> Designing UI</label>
+  </div>
+
+  <div class="question">
+    <p>2. Which methodology uses sprints and stand-up meetings?</p>
+    <label><input type="radio" name="pmq2"> Agile</label><br>
+    <label><input type="radio" name="pmq2"> Waterfall</label><br>
+    <label><input type="radio" name="pmq2"> Spiral</label>
+  </div>
+
+  <div class="question">
+    <p>3. What is a Gantt Chart used for?</p>
+    <label><input type="radio" name="pmq3"> Project scheduling</label><br>
+    <label><input type="radio" name="pmq3"> Debugging code</label><br>
+    <label><input type="radio" name="pmq3"> Designing graphics</label>
+  </div>
+
+  <div class="question">
+    <p>4. What does PMI stand for in project management?</p>
+    <label><input type="radio" name="pmq4"> Project Management Institute</label><br>
+    <label><input type="radio" name="pmq4"> Process Model Integration</label><br>
+    <label><input type="radio" name="pmq4"> Performance Management Index</label>
+  </div>
+
+  <div class="question">
+    <p>5. Which is NOT a phase in the project life cycle?</p>
+    <label><input type="radio" name="pmq5"> Initiation</label><br>
+    <label><input type="radio" name="pmq5"> Execution</label><br>
+    <label><input type="radio" name="pmq5"> Cooking</label>
+  </div>
+
+  <div class="question">
+    <p>6. What is a project risk?</p>
+    <label><input type="radio" name="pmq6"> An uncertain event that may affect objectives</label><br>
+    <label><input type="radio" name="pmq6"> A guaranteed issue</label><br>
+    <label><input type="radio" name="pmq6"> A project milestone</label>
+  </div>
+
+  <div class="question">
+    <p>7. Which document defines project scope, goals, and deliverables?</p>
+    <label><input type="radio" name="pmq7"> Project Charter</label><br>
+    <label><input type="radio" name="pmq7"> Code Review</label><br>
+    <label><input type="radio" name="pmq7"> Test Plan</label>
+  </div>
+
+  <div class="question">
+    <p>8. Which tool is commonly used for project management?</p>
+    <label><input type="radio" name="pmq8"> Jira</label><br>
+    <label><input type="radio" name="pmq8"> Photoshop</label><br>
+    <label><input type="radio" name="pmq8"> Eclipse</label>
+  </div>
+
+  <div class="question">
+    <p>9. What does the term "scope creep" mean?</p>
+    <label><input type="radio" name="pmq9"> Uncontrolled changes in project scope</label><br>
+    <label><input type="radio" name="pmq9"> Tracking project budget</label><br>
+    <label><input type="radio" name="pmq9"> Improving UI design</label>
+  </div>
+
+  <div class="question">
+    <p>10. What is the triple constraint of project management?</p>
+    <label><input type="radio" name="pmq10"> Time, Cost, Scope</label><br>
+    <label><input type="radio" name="pmq10"> People, Tools, Food</label><br>
+    <label><input type="radio" name="pmq10"> Testing, Coding, Debugging</label>
+  </div>
+
+  <div class="question">
+    <p>11. Which methodology delivers projects in sequential phases?</p>
+    <label><input type="radio" name="pmq11"> Waterfall</label><br>
+    <label><input type="radio" name="pmq11"> Agile</label><br>
+    <label><input type="radio" name="pmq11"> Kanban</label>
+  </div>
+
+  <div class="question">
+    <p>12. What is a milestone in a project?</p>
+    <label><input type="radio" name="pmq12"> A significant point or event in the project</label><br>
+    <label><input type="radio" name="pmq12"> A bug in the system</label><br>
+    <label><input type="radio" name="pmq12"> A team member role</label>
+  </div>
+
+  <div class="question">
+    <p>13. Which Agile ceremony focuses on reviewing completed work?</p>
+    <label><input type="radio" name="pmq13"> Sprint Review</label><br>
+    <label><input type="radio" name="pmq13"> Daily Stand-up</label><br>
+    <label><input type="radio" name="pmq13"> Retrospective</label>
+  </div>
+
+  <div class="question">
+    <p>14. Which project document tracks costs, timelines, and resources?</p>
+    <label><input type="radio" name="pmq14"> Project Plan</label><br>
+    <label><input type="radio" name="pmq14"> Wireframe</label><br>
+    <label><input type="radio" name="pmq14"> Source Code</label>
+  </div>
+
+  <div class="question">
+    <p>15. What is a stakeholder?</p>
+    <label><input type="radio" name="pmq15"> Anyone impacted by the project</label><br>
+    <label><input type="radio" name="pmq15"> Only developers</label><br>
+    <label><input type="radio" name="pmq15"> Only testers</label>
+  </div>
+  <button type="submit">Submit</button>  
+</form>
+    </div>
+    <div id="ba" class="role-section">
+      <form action="">
+      <h3>Business Analyst Role - 15 Questions</h3>
+      <div class="question">
+    <p>1. What is the primary role of a Business Analyst?</p>
+    <label><input type="radio" name="baq1"> Bridging the gap between business and IT</label><br>
+    <label><input type="radio" name="baq1"> Writing code</label><br>
+    <label><input type="radio" name="baq1"> Designing UI</label>
+  </div>
+
+  <div class="question">
+    <p>2. Which document is commonly prepared by Business Analysts?</p>
+    <label><input type="radio" name="baq2"> Business Requirements Document (BRD)</label><br>
+    <label><input type="radio" name="baq2"> Test Case Document</label><br>
+    <label><input type="radio" name="baq2"> Source Code</label>
+  </div>
+
+  <div class="question">
+    <p>3. Which technique is used to gather requirements?</p>
+    <label><input type="radio" name="baq3"> Interviews</label><br>
+    <label><input type="radio" name="baq3"> Coding</label><br>
+    <label><input type="radio" name="baq3"> Debugging</label>
+  </div>
+
+  <div class="question">
+    <p>4. What does SWOT analysis stand for?</p>
+    <label><input type="radio" name="baq4"> Strengths, Weaknesses, Opportunities, Threats</label><br>
+    <label><input type="radio" name="baq4"> Software, Web, Operations, Testing</label><br>
+    <label><input type="radio" name="baq4"> Systems, Workflow, Options, Tools</label>
+  </div>
+
+  <div class="question">
+    <p>5. What is a use case?</p>
+    <label><input type="radio" name="baq5"> A description of system interaction from user’s perspective</label><br>
+    <label><input type="radio" name="baq5"> A type of bug</label><br>
+    <label><input type="radio" name="baq5"> A test script</label>
+  </div>
+
+  <div class="question">
+    <p>6. Which diagram shows system interactions with external actors?</p>
+    <label><input type="radio" name="baq6"> Use Case Diagram</label><br>
+    <label><input type="radio" name="baq6"> Class Diagram</label><br>
+    <label><input type="radio" name="baq6"> ER Diagram</label>
+  </div>
+
+  <div class="question">
+    <p>7. Which elicitation technique uses group brainstorming?</p>
+    <label><input type="radio" name="baq7"> JAD (Joint Application Development)</label><br>
+    <label><input type="radio" name="baq7"> Pair Programming</label><br>
+    <label><input type="radio" name="baq7"> Debugging</label>
+  </div>
+
+  <div class="question">
+    <p>8. What does an MVP stand for?</p>
+    <label><input type="radio" name="baq8"> Minimum Viable Product</label><br>
+    <label><input type="radio" name="baq8"> Most Valuable Plan</label><br>
+    <label><input type="radio" name="baq8"> Main Vendor Platform</label>
+  </div>
+
+  <div class="question">
+    <p>9. Which tool is often used for process modeling?</p>
+    <label><input type="radio" name="baq9"> MS Visio</label><br>
+    <label><input type="radio" name="baq9"> Photoshop</label><br>
+    <label><input type="radio" name="baq9"> Eclipse</label>
+  </div>
+
+  <div class="question">
+    <p>10. What is a functional requirement?</p>
+    <label><input type="radio" name="baq10"> Describes what the system should do</label><br>
+    <label><input type="radio" name="baq10"> Describes database optimization</label><br>
+    <label><input type="radio" name="baq10"> Describes server capacity only</label>
+  </div>
+
+  <div class="question">
+    <p>11. What is a non-functional requirement?</p>
+    <label><input type="radio" name="baq11"> Performance, security, usability aspects</label><br>
+    <label><input type="radio" name="baq11"> User login fields</label><br>
+    <label><input type="radio" name="baq11"> Specific API calls</label>
+  </div>
+
+  <div class="question">
+    <p>12. Which Agile role is closest to a Business Analyst?</p>
+    <label><input type="radio" name="baq12"> Product Owner</label><br>
+    <label><input type="radio" name="baq12"> Scrum Master</label><br>
+    <label><input type="radio" name="baq12"> Developer</label>
+  </div>
+
+  <div class="question">
+    <p>13. What is GAP analysis?</p>
+    <label><input type="radio" name="baq13"> Identifying the difference between current and desired state</label><br>
+    <label><input type="radio" name="baq13"> Writing database queries</label><br>
+    <label><input type="radio" name="baq13"> Tracking project budget</label>
+  </div>
+
+  <div class="question">
+    <p>14. Which document lists assumptions, constraints, and risks?</p>
+    <label><input type="radio" name="baq14"> Business Case</label><br>
+    <label><input type="radio" name="baq14"> Code Review Report</label><br>
+    <label><input type="radio" name="baq14"> Wireframe</label>
+  </div>
+
+  <div class="question">
+    <p>15. What is the purpose of a stakeholder analysis?</p>
+    <label><input type="radio" name="baq15"> To identify stakeholders and their interests</label><br>
+    <label><input type="radio" name="baq15"> To test system performance</label><br>
+    <label><input type="radio" name="baq15"> To debug application errors</label>
+  </div>
+  <button type="submit">Submit</button>
+  </form>
+    </div>
+  <div id="dba" class="role-section">
+    <form action="">
+      <h3>Database Administrator Role - 15 Questions</h3>
+      <div class="question">
+    <p>1. What is the primary role of a Database Administrator?</p>
+    <label><input type="radio" name="dbaq1"> Manage, secure, and maintain databases</label><br>
+    <label><input type="radio" name="dbaq1"> Write UI designs</label><br>
+    <label><input type="radio" name="dbaq1"> Create business strategies</label>
+  </div>
+
+  <div class="question">
+    <p>2. Which SQL command is used to modify existing records?</p>
+    <label><input type="radio" name="dbaq2"> UPDATE</label><br>
+    <label><input type="radio" name="dbaq2"> SELECT</label><br>
+    <label><input type="radio" name="dbaq2"> DELETE</label>
+  </div>
+
+  <div class="question">
+    <p>3. What does ACID stand for in databases?</p>
+    <label><input type="radio" name="dbaq3"> Atomicity, Consistency, Isolation, Durability</label><br>
+    <label><input type="radio" name="dbaq3"> Access, Control, Index, Data</label><br>
+    <label><input type="radio" name="dbaq3"> Action, Configuration, Input, Data</label>
+  </div>
+
+  <div class="question">
+    <p>4. Which of these is a relational database?</p>
+    <label><input type="radio" name="dbaq4"> MySQL</label><br>
+    <label><input type="radio" name="dbaq4"> MongoDB</label><br>
+    <label><input type="radio" name="dbaq4"> Cassandra</label>
+  </div>
+
+  <div class="question">
+    <p>5. Which command removes all rows from a table but keeps its structure?</p>
+    <label><input type="radio" name="dbaq5"> TRUNCATE</label><br>
+    <label><input type="radio" name="dbaq5"> DROP</label><br>
+    <label><input type="radio" name="dbaq5"> DELETE</label>
+  </div>
+
+  <div class="question">
+    <p>6. What is database normalization?</p>
+    <label><input type="radio" name="dbaq6"> Organizing data to reduce redundancy</label><br>
+    <label><input type="radio" name="dbaq6"> Encrypting database files</label><br>
+    <label><input type="radio" name="dbaq6"> Running performance tests</label>
+  </div>
+
+  <div class="question">
+    <p>7. Which index type improves query performance?</p>
+    <label><input type="radio" name="dbaq7"> B-Tree Index</label><br>
+    <label><input type="radio" name="dbaq7"> Waterfall Index</label><br>
+    <label><input type="radio" name="dbaq7"> Linear Index</label>
+  </div>
+
+  <div class="question">
+    <p>8. Which command creates a new database?</p>
+    <label><input type="radio" name="dbaq8"> CREATE DATABASE</label><br>
+    <label><input type="radio" name="dbaq8"> NEW DB</label><br>
+    <label><input type="radio" name="dbaq8"> INIT DATABASE</label>
+  </div>
+
+  <div class="question">
+    <p>9. Which backup type copies only changed data since the last backup?</p>
+    <label><input type="radio" name="dbaq9"> Incremental Backup</label><br>
+    <label><input type="radio" name="dbaq9"> Full Backup</label><br>
+    <label><input type="radio" name="dbaq9"> Differential Backup</label>
+  </div>
+
+  <div class="question">
+    <p>10. What is database sharding?</p>
+    <label><input type="radio" name="dbaq10"> Splitting a database into smaller, faster parts</label><br>
+    <label><input type="radio" name="dbaq10"> Encrypting database logs</label><br>
+    <label><input type="radio" name="dbaq10"> Running stored procedures</label>
+  </div>
+
+  <div class="question">
+    <p>11. Which command is used to remove a table permanently?</p>
+    <label><input type="radio" name="dbaq11"> DROP</label><br>
+    <label><input type="radio" name="dbaq11"> TRUNCATE</label><br>
+    <label><input type="radio" name="dbaq11"> DELETE</label>
+  </div>
+
+  <div class="question">
+    <p>12. Which SQL clause is used to filter records?</p>
+    <label><input type="radio" name="dbaq12"> WHERE</label><br>
+    <label><input type="radio" name="dbaq12"> GROUP BY</label><br>
+    <label><input type="radio" name="dbaq12"> ORDER BY</label>
+  </div>
+
+  <div class="question">
+    <p>13. Which of the following ensures database security?</p>
+    <label><input type="radio" name="dbaq13"> User roles and privileges</label><br>
+    <label><input type="radio" name="dbaq13"> Unlimited access for everyone</label><br>
+    <label><input type="radio" name="dbaq13"> Removing passwords</label>
+  </div>
+
+  <div class="question">
+    <p>14. Which SQL command combines rows from two or more tables?</p>
+    <label><input type="radio" name="dbaq14"> JOIN</label><br>
+    <label><input type="radio" name="dbaq14"> UNION</label><br>
+    <label><input type="radio" name="dbaq14"> CONNECT</label>
+  </div>
+
+  <div class="question">
+    <p>15. What is the purpose of database indexing?</p>
+    <label><input type="radio" name="dbaq15"> To speed up data retrieval</label><br>
+    <label><input type="radio" name="dbaq15"> To increase redundancy</label><br>
+    <label><input type="radio" name="dbaq15"> To delete old data</label>
+  </div>
+  <button type="submit">Submit</button>
+  </form>
+  </div>
+  <div id="devops" class="role-section">
+    <form action="">
+      <h3>DevOps Role - 15 Questions</h3>
+      <div class="question">
+    <p>1. What is the main goal of DevOps?</p>
+    <label><input type="radio" name="devq1"> Improve collaboration between development and operations</label><br>
+    <label><input type="radio" name="devq1"> Write only backend code</label><br>
+    <label><input type="radio" name="devq1"> Focus only on UI design</label>
+  </div>
+
+  <div class="question">
+    <p>2. Which tool is commonly used for Continuous Integration (CI)?</p>
+    <label><input type="radio" name="devq2"> Jenkins</label><br>
+    <label><input type="radio" name="devq2"> Photoshop</label><br>
+    <label><input type="radio" name="devq2"> MS Word</label>
+  </div>
+
+  <div class="question">
+    <p>3. What does “Infrastructure as Code (IaC)” mean?</p>
+    <label><input type="radio" name="devq3"> Managing infrastructure using code and automation</label><br>
+    <label><input type="radio" name="devq3"> Writing SQL queries</label><br>
+    <label><input type="radio" name="devq3"> Designing UI screens</label>
+  </div>
+
+  <div class="question">
+    <p>4. Which tool is used for containerization?</p>
+    <label><input type="radio" name="devq4"> Docker</label><br>
+    <label><input type="radio" name="devq4"> Excel</label><br>
+    <label><input type="radio" name="devq4"> Notepad</label>
+  </div>
+
+  <div class="question">
+    <p>5. Which of these is a popular configuration management tool?</p>
+    <label><input type="radio" name="devq5"> Ansible</label><br>
+    <label><input type="radio" name="devq5"> MS Paint</label><br>
+    <label><input type="radio" name="devq5"> Google Docs</label>
+  </div>
+
+  <div class="question">
+    <p>6. What is Kubernetes mainly used for?</p>
+    <label><input type="radio" name="devq6"> Orchestrating and managing containers</label><br>
+    <label><input type="radio" name="devq6"> Writing Java code</label><br>
+    <label><input type="radio" name="devq6"> Creating Word documents</label>
+  </div>
+
+  <div class="question">
+    <p>7. Which practice ensures code is tested and deployed frequently?</p>
+    <label><input type="radio" name="devq7"> Continuous Integration/Continuous Deployment (CI/CD)</label><br>
+    <label><input type="radio" name="devq7"> Manual deployment</label><br>
+    <label><input type="radio" name="devq7"> Monthly releases</label>
+  </div>
+
+  <div class="question">
+    <p>8. Which version control system is widely used in DevOps?</p>
+    <label><input type="radio" name="devq8"> Git</label><br>
+    <label><input type="radio" name="devq8"> Dropbox</label><br>
+    <label><input type="radio" name="devq8"> PowerPoint</label>
+  </div>
+
+  <div class="question">
+    <p>9. What does “Monitoring” in DevOps help with?</p>
+    <label><input type="radio" name="devq9"> Detecting and resolving system issues quickly</label><br>
+    <label><input type="radio" name="devq9"> Writing test cases</label><br>
+    <label><input type="radio" name="devq9"> Creating UI designs</label>
+  </div>
+
+  <div class="question">
+    <p>10. Which tool is used for monitoring applications and infrastructure?</p>
+    <label><input type="radio" name="devq10"> Prometheus</label><br>
+    <label><input type="radio" name="devq10"> Excel</label><br>
+    <label><input type="radio" name="devq10"> Photoshop</label>
+  </div>
+
+  <div class="question">
+    <p>11. Which DevOps practice helps in avoiding “it works on my machine” problems?</p>
+    <label><input type="radio" name="devq11"> Containerization</label><br>
+    <label><input type="radio" name="devq11"> Manual configuration</label><br>
+    <label><input type="radio" name="devq11"> Ignoring testing</label>
+  </div>
+
+  <div class="question">
+    <p>12. Which tool is used for logging and log analysis?</p>
+    <label><input type="radio" name="devq12"> ELK Stack (Elasticsearch, Logstash, Kibana)</label><br>
+    <label><input type="radio" name="devq12"> MS Excel</label><br>
+    <label><input type="radio" name="devq12"> Gmail</label>
+  </div>
+
+  <div class="question">
+    <p>13. What is a “pipeline” in CI/CD?</p>
+    <label><input type="radio" name="devq13"> An automated sequence of build, test, and deployment steps</label><br>
+    <label><input type="radio" name="devq13"> A database schema</label><br>
+    <label><input type="radio" name="devq13"> A UI flowchart</label>
+  </div>
+
+  <div class="question">
+    <p>14. Which of these tools is used for cloud automation in DevOps?</p>
+    <label><input type="radio" name="devq14"> Terraform</label><br>
+    <label><input type="radio" name="devq14"> Paint</label><br>
+    <label><input type="radio" name="devq14"> VLC Player</label>
+  </div>
+
+  <div class="question">
+    <p>15. What is the benefit of using DevOps practices?</p>
+    <label><input type="radio" name="devq15"> Faster delivery and improved collaboration</label><br>
+    <label><input type="radio" name="devq15"> Slower release cycles</label><br>
+    <label><input type="radio" name="devq15"> More manual work</label>
+  </div>
+  <button type="submit">Submit</button>
+  </form>
+  </div>
+  <div id="sysadmin" class="role-section">
+    <form action="">
+      <h3>Syatem Administrator Role - 15 Questions</h3>
+      <div class="question">
+    <p>1. What is the primary role of a System Administrator?</p>
+    <label><input type="radio" name="sysq1"> Manage and maintain IT systems and servers</label><br>
+    <label><input type="radio" name="sysq1"> Design user interfaces</label><br>
+    <label><input type="radio" name="sysq1"> Write business strategies</label>
+  </div>
+
+  <div class="question">
+    <p>2. Which operating systems are most commonly managed by System Administrators?</p>
+    <label><input type="radio" name="sysq2"> Windows & Linux</label><br>
+    <label><input type="radio" name="sysq2"> Android & iOS</label><br>
+    <label><input type="radio" name="sysq2"> Photoshop & Illustrator</label>
+  </div>
+
+  <div class="question">
+    <p>3. What is Active Directory used for?</p>
+    <label><input type="radio" name="sysq3"> Centralized user and computer management</label><br>
+    <label><input type="radio" name="sysq3"> Designing websites</label><br>
+    <label><input type="radio" name="sysq3"> Video editing</label>
+  </div>
+
+  <div class="question">
+    <p>4. Which protocol is commonly used for remote server management?</p>
+    <label><input type="radio" name="sysq4"> SSH</label><br>
+    <label><input type="radio" name="sysq4"> HTTP</label><br>
+    <label><input type="radio" name="sysq4"> SMTP</label>
+  </div>
+
+  <div class="question">
+    <p>5. What does RAID provide in storage systems?</p>
+    <label><input type="radio" name="sysq5"> Redundancy and performance</label><br>
+    <label><input type="radio" name="sysq5"> Faster coding</label><br>
+    <label><input type="radio" name="sysq5"> Image processing</label>
+  </div>
+
+  <div class="question">
+    <p>6. Which tool is used to monitor system performance on Linux?</p>
+    <label><input type="radio" name="sysq6"> top</label><br>
+    <label><input type="radio" name="sysq6"> paint</label><br>
+    <label><input type="radio" name="sysq6"> notepad</label>
+  </div>
+
+  <div class="question">
+    <p>7. Which service is responsible for converting domain names to IP addresses?</p>
+    <label><input type="radio" name="sysq7"> DNS</label><br>
+    <label><input type="radio" name="sysq7"> DHCP</label><br>
+    <label><input type="radio" name="sysq7"> FTP</label>
+  </div>
+
+  <div class="question">
+    <p>8. What is the function of a firewall?</p>
+    <label><input type="radio" name="sysq8"> Control and filter network traffic</label><br>
+    <label><input type="radio" name="sysq8"> Create documents</label><br>
+    <label><input type="radio" name="sysq8"> Edit images</label>
+  </div>
+
+  <div class="question">
+    <p>9. Which protocol is used for sending emails?</p>
+    <label><input type="radio" name="sysq9"> SMTP</label><br>
+    <label><input type="radio" name="sysq9"> FTP</label><br>
+    <label><input type="radio" name="sysq9"> SNMP</label>
+  </div>
+
+  <div class="question">
+    <p>10. What is virtualization in system administration?</p>
+    <label><input type="radio" name="sysq10"> Running multiple virtual machines on one physical machine</label><br>
+    <label><input type="radio" name="sysq10"> Drawing diagrams</label><br>
+    <label><input type="radio" name="sysq10"> Writing UI code</label>
+  </div>
+
+  <div class="question">
+    <p>11. Which tool is commonly used for managing Windows servers remotely?</p>
+    <label><input type="radio" name="sysq11"> Remote Desktop (RDP)</label><br>
+    <label><input type="radio" name="sysq11"> Excel</label><br>
+    <label><input type="radio" name="sysq11"> Photoshop</label>
+  </div>
+
+  <div class="question">
+    <p>12. What does DHCP provide to network devices?</p>
+    <label><input type="radio" name="sysq12"> Automatic IP addresses</label><br>
+    <label><input type="radio" name="sysq12"> Website content</label><br>
+    <label><input type="radio" name="sysq12"> System security patches</label>
+  </div>
+
+  <div class="question">
+    <p>13. Which command is used to check network connectivity?</p>
+    <label><input type="radio" name="sysq13"> ping</label><br>
+    <label><input type="radio" name="sysq13"> cd</label><br>
+    <label><input type="radio" name="sysq13"> mkdir</label>
+  </div>
+
+  <div class="question">
+    <p>14. What is a patch in system administration?</p>
+    <label><input type="radio" name="sysq14"> An update to fix bugs or vulnerabilities</label><br>
+    <label><input type="radio" name="sysq14"> A type of firewall</label><br>
+    <label><input type="radio" name="sysq14"> A network device</label>
+  </div>
+
+  <div class="question">
+    <p>15. What is the main purpose of system backups?</p>
+    <label><input type="radio" name="sysq15"> To restore data in case of failure</label><br>
+    <label><input type="radio" name="sysq15"> To improve system speed</label><br>
+    <label><input type="radio" name="sysq15"> To increase disk usage</label>
+  </div>
+  <button type="submit">Submit</button>
+  </form>
+  </div>
+  <div id="cloud" class="role-section">
+    <form action="">
+      <h3>Cloud Engineer Role - 15 Questions</h3>
+      <div class="question">
+    <p>1. What is the main responsibility of a Cloud Engineer?</p>
+    <label><input type="radio" name="cloudq1"> Design, manage, and support cloud infrastructure</label><br>
+    <label><input type="radio" name="cloudq1"> Create UI wireframes</label><br>
+    <label><input type="radio" name="cloudq1"> Write HR policies</label>
+  </div>
+
+  <div class="question">
+    <p>2. Which of these is a major cloud service provider?</p>
+    <label><input type="radio" name="cloudq2"> AWS</label><br>
+    <label><input type="radio" name="cloudq2"> Photoshop</label><br>
+    <label><input type="radio" name="cloudq2"> VLC Player</label>
+  </div>
+
+  <div class="question">
+    <p>3. What does IaaS stand for?</p>
+    <label><input type="radio" name="cloudq3"> Infrastructure as a Service</label><br>
+    <label><input type="radio" name="cloudq3"> Internet as a Software</label><br>
+    <label><input type="radio" name="cloudq3"> Integration as a System</label>
+  </div>
+
+  <div class="question">
+    <p>4. Which service model provides ready-to-use software?</p>
+    <label><input type="radio" name="cloudq4"> SaaS</label><br>
+    <label><input type="radio" name="cloudq4"> PaaS</label><br>
+    <label><input type="radio" name="cloudq4"> IaaS</label>
+  </div>
+
+  <div class="question">
+    <p>5. Which cloud model combines public and private clouds?</p>
+    <label><input type="radio" name="cloudq5"> Hybrid Cloud</label><br>
+    <label><input type="radio" name="cloudq5"> Public Cloud</label><br>
+    <label><input type="radio" name="cloudq5"> Private Cloud</label>
+  </div>
+
+  <div class="question">
+    <p>6. What is the purpose of load balancing in cloud environments?</p>
+    <label><input type="radio" name="cloudq6"> Distribute traffic across multiple servers</label><br>
+    <label><input type="radio" name="cloudq6"> Write code faster</label><br>
+    <label><input type="radio" name="cloudq6"> Compress files</label>
+  </div>
+
+  <div class="question">
+    <p>7. Which AWS service is used for object storage?</p>
+    <label><input type="radio" name="cloudq7"> Amazon S3</label><br>
+    <label><input type="radio" name="cloudq7"> Amazon EC2</label><br>
+    <label><input type="radio" name="cloudq7"> Amazon VPC</label>
+  </div>
+
+  <div class="question">
+    <p>8. Which cloud concept ensures applications can scale automatically?</p>
+    <label><input type="radio" name="cloudq8"> Auto Scaling</label><br>
+    <label><input type="radio" name="cloudq8"> Debugging</label><br>
+    <label><input type="radio" name="cloudq8"> Encryption</label>
+  </div>
+
+  <div class="question">
+    <p>9. Which Azure service is used for virtual machines?</p>
+    <label><input type="radio" name="cloudq9"> Azure VM</label><br>
+    <label><input type="radio" name="cloudq9"> Azure Blob</label><br>
+    <label><input type="radio" name="cloudq9"> Azure Functions</label>
+  </div>
+
+  <div class="question">
+    <p>10. What is serverless computing?</p>
+    <label><input type="radio" name="cloudq10"> Running code without managing servers</label><br>
+    <label><input type="radio" name="cloudq10"> Installing operating systems manually</label><br>
+    <label><input type="radio" name="cloudq10"> Designing server racks</label>
+  </div>
+
+  <div class="question">
+    <p>11. Which Google Cloud service is used for container orchestration?</p>
+    <label><input type="radio" name="cloudq11"> GKE (Google Kubernetes Engine)</label><br>
+    <label><input type="radio" name="cloudq11"> Google Drive</label><br>
+    <label><input type="radio" name="cloudq11"> Gmail</label>
+  </div>
+
+  <div class="question">
+    <p>12. What does VPC stand for in cloud networking?</p>
+    <label><input type="radio" name="cloudq12"> Virtual Private Cloud</label><br>
+    <label><input type="radio" name="cloudq12"> Virtual Public Cluster</label><br>
+    <label><input type="radio" name="cloudq12"> Visual Private Console</label>
+  </div>
+
+  <div class="question">
+    <p>13. Which tool is commonly used for cloud infrastructure automation?</p>
+    <label><input type="radio" name="cloudq13"> Terraform</label><br>
+    <label><input type="radio" name="cloudq13"> Photoshop</label><br>
+    <label><input type="radio" name="cloudq13"> Word</label>
+  </div>
+
+  <div class="question">
+    <p>14. What is the benefit of cloud elasticity?</p>
+    <label><input type="radio" name="cloudq14"> Resources scale up or down as needed</label><br>
+    <label><input type="radio" name="cloudq14"> Fixed resource allocation</label><br>
+    <label><input type="radio" name="cloudq14"> Manual upgrades</label>
+  </div>
+
+  <div class="question">
+    <p>15. What is multi-cloud strategy?</p>
+    <label><input type="radio" name="cloudq15"> Using services from multiple cloud providers</label><br>
+    <label><input type="radio" name="cloudq15"> Running multiple desktops</label><br>
+    <label><input type="radio" name="cloudq15"> Installing multiple OS on a PC</label>
+  </div>
+  <button type="submit">Submit</button>
+  </form>
+  </div>
+  <div id="data" class="role-section">
+    <form action="">
+      <h3>Data Analyst Role - 15 Questions</h3>
+      <div class="question">
+    <p>1. What is the primary role of a Data Analyst?</p>
+    <label><input type="radio" name="daq1"> Collect, analyze, and interpret data</label><br>
+    <label><input type="radio" name="daq1"> Manage servers</label><br>
+    <label><input type="radio" name="daq1"> Design UI</label>
+  </div>
+
+  <div class="question">
+    <p>2. Which language is most commonly used for data analysis?</p>
+    <label><input type="radio" name="daq2"> Python</label><br>
+    <label><input type="radio" name="daq2"> HTML</label><br>
+    <label><input type="radio" name="daq2"> CSS</label>
+  </div>
+
+  <div class="question">
+    <p>3. What is a dashboard in data analysis?</p>
+    <label><input type="radio" name="daq3"> A visual display of data insights</label><br>
+    <label><input type="radio" name="daq3"> A database schema</label><br>
+    <label><input type="radio" name="daq3"> A type of algorithm</label>
+  </div>
+
+  <div class="question">
+    <p>4. Which tool is widely used for data visualization?</p>
+    <label><input type="radio" name="daq4"> Tableau</label><br>
+    <label><input type="radio" name="daq4"> MS Paint</label><br>
+    <label><input type="radio" name="daq4"> Notepad</label>
+  </div>
+
+  <div class="question">
+    <p>5. What does SQL stand for?</p>
+    <label><input type="radio" name="daq5"> Structured Query Language</label><br>
+    <label><input type="radio" name="daq5"> Simple Query Logic</label><br>
+    <label><input type="radio" name="daq5"> Standard Quick Lookup</label>
+  </div>
+
+  <div class="question">
+    <p>6. Which type of chart is best for showing data trends over time?</p>
+    <label><input type="radio" name="daq6"> Line Chart</label><br>
+    <label><input type="radio" name="daq6"> Pie Chart</label><br>
+    <label><input type="radio" name="daq6"> Scatter Plot</label>
+  </div>
+
+  <div class="question">
+    <p>7. What is data cleaning?</p>
+    <label><input type="radio" name="daq7"> Removing errors and inconsistencies from data</label><br>
+    <label><input type="radio" name="daq7"> Formatting dashboards</label><br>
+    <label><input type="radio" name="daq7"> Installing databases</label>
+  </div>
+
+  <div class="question">
+    <p>8. Which Python library is widely used for data analysis?</p>
+    <label><input type="radio" name="daq8"> Pandas</label><br>
+    <label><input type="radio" name="daq8"> Flask</label><br>
+    <label><input type="radio" name="daq8"> React</label>
+  </div>
+
+  <div class="question">
+    <p>9. What is the purpose of a pivot table in Excel?</p>
+    <label><input type="radio" name="daq9"> Summarize and analyze data</label><br>
+    <label><input type="radio" name="daq9"> Create presentations</label><br>
+    <label><input type="radio" name="daq9"> Run code</label>
+  </div>
+
+  <div class="question">
+    <p>10. What does ETL stand for?</p>
+    <label><input type="radio" name="daq10"> Extract, Transform, Load</label><br>
+    <label><input type="radio" name="daq10"> Enter, Test, Learn</label><br>
+    <label><input type="radio" name="daq10"> Execute, Transfer, Loop</label>
+  </div>
+
+  <div class="question">
+    <p>11. Which statistical measure shows the average value of a dataset?</p>
+    <label><input type="radio" name="daq11"> Mean</label><br>
+    <label><input type="radio" name="daq11"> Median</label><br>
+    <label><input type="radio" name="daq11"> Mode</label>
+  </div>
+
+  <div class="question">
+    <p>12. Which visualization is best for showing parts of a whole?</p>
+    <label><input type="radio" name="daq12"> Pie Chart</label><br>
+    <label><input type="radio" name="daq12"> Bar Chart</label><br>
+    <label><input type="radio" name="daq12"> Line Chart</label>
+  </div>
+
+  <div class="question">
+    <p>13. What is correlation in data analysis?</p>
+    <label><input type="radio" name="daq13"> Relationship between two variables</label><br>
+    <label><input type="radio" name="daq13"> Sorting data alphabetically</label><br>
+    <label><input type="radio" name="daq13"> Cleaning duplicate rows</label>
+  </div>
+
+  <div class="question">
+    <p>14. Which tool is commonly used for big data analysis?</p>
+    <label><input type="radio" name="daq14"> Apache Hadoop</label><br>
+    <label><input type="radio" name="daq14"> MS Word</label><br>
+    <label><input type="radio" name="daq14"> Photoshop</label>
+  </div>
+
+  <div class="question">
+    <p>15. What is the benefit of data visualization?</p>
+    <label><input type="radio" name="daq15"> Helps communicate insights clearly</label><br>
+    <label><input type="radio" name="daq15"> Makes code run faster</label><br>
+    <label><input type="radio" name="daq15"> Hides data issues</label>
+  </div>
+  <button type="submit">Submit</button>
+  </form>
+  </div>
+
+ 
+
+ <script type="text/javascript">
+  function testing() {
+ document.getElementById("interviewForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  // Collect all answers
+  const answers = {};
+  for (let i = 1; i <= 15; i++) {
+    const selected = document.querySelector(`input[name="q${i}"]:checked`);
+    answers[`q${i}`] = selected ? selected.value : "";
+  }
+
+  // Send JSON to backend
+  const res = await fetch("http://localhost:8080/interview/testing", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(answers)
+  });
+
+  const result = await res.text();
+  alert(result);
+});
+}
+function developer() {
+    const body = {};
+    for (let i = 1; i <= 15; i++) {
+        body['dq' + i] = document.getElementById('dq' + i).value;
+    }
+
+    fetch("http://localhost:8080/developer", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Successful");
+             
+        } else {
+            return response.json().then(data => { throw new Error(data.message || "FAILED"); });
+        }
+    })
+    .catch(error => alert(error.message));
+}
+
+function developer() {
+    fetch("http://localhost:8080/uiux", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({})
+})
+
+   .then(response => {
+        if (response.ok) {
+            alert("Successfull");
+            window.location.href="interview.html"
+            
+        }else{
+            return response.json().then(data=>{throw new Error(data.message || "FAILED")});
+        }
+   
+}).catch(error =>{
+    alert(error.message);
+})
+}
+  function handleRoleSelection(checkbox) {
+    const selected = document.querySelectorAll('input[name="role"]:checked');
+    if (selected.length > 5) {
+      alert("You can select a maximum of 5 roles.");
+      checkbox.checked = false;
+      return;
+    }
+    document.getElementById(checkbox.value).style.display = checkbox.checked ? "block" : "none";
+  }
+</script>
+
+
+</body>
+</html>

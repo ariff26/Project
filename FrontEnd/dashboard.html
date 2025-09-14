@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard Home Page</title>
+  <style>
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background: url('https://via.placeholder.com/1200x250') no-repeat center center/cover;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    .dashboard {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .section {
+      background: white;
+      flex: 1;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      color: #007BFF;
+    }
+
+    .section p {
+      font-size: 1rem;
+      color: #555;
+    }
+        footer {
+      background-color: blue;
+      color: white;
+      position: relative;
+      top: 140px;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      width: 100%;
+    }
+     @media only screen and (max-width: 480px){
+      body{
+        width: 90%;
+      }
+      .dashboard{
+        display: block;
+        justify-content: space-between;
+        padding-bottom: 15px;
+         
+        width: 90%;
+       
+        /* border: 1px solid black; */
+      }
+      footer{
+        font-size: 8px;
+        /* border: 10px solid red; */
+        width: 123%;
+        position: relative;
+        /* left: -25px; */
+      }
+      header h1{
+        /* border: 1px solid red; */
+        font-size: 27px;
+        position: relative;
+        left: 10px;
+      }
+      .section{
+        padding-right: 30px;
+        position:relative;
+        left: 20px;
+      }
+     }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Your Dashboard</h1>
+  </header>
+
+  <main class="dashboard">
+    <div class="section" id="interviewSection"> 
+      <a href="./login.html" style="list-style: none;text-decoration: none;"><h2>Interview</h2></a>
+      <p>Manage your interviews and candidate schedules.</p>
+    </div>
+
+    <div class="section" id="courseSection">
+      <a href="./courses.html" style="text-decoration: none;"><h2>Course</h2></a>
+      <p>Access courses and training materials.</p>
+    </div>
+
+    <div class="section" id="supplierSection">
+      <a href="./supplier.html" style="text-decoration: none;"><h2>Supplier</h2></a>
+      <p>View and manage supplier details.</p>
+    </div>
+  </main>
+
+  <script>
+     
+    // document.getElementById('interviewSection').addEventListener('click', () => {
+    //   alert('Navigate to Interview Section');
+    // });
+
+    // document.getElementById('courseSection').addEventListener('click', () => {
+    //   alert('Navigate to Course Section');
+    // });
+
+    // document.getElementById('supplierSection').addEventListener('click', () => {
+    //   alert('Navigate to Supplier Section');
+    // });
+  </script>
+    <footer>
+    © 2025 Zenjade Automation Technology Private Limited. All Rights Reserved by ZATPL.
+  </footer>
+</body>
+</html>
